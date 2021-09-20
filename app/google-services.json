@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "674917342859",
+    "project_id": "gripapp-eb4b4",
+    "storage_bucket": "gripapp-eb4b4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:674917342859:android:9c5b6fc254602708e4fe8e",
+        "android_client_info": {
+          "package_name": "com.example.gripapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "674917342859-2m9fo4u70n677ic7pvlchvuvn9hseu25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCadSYET51f9F0dUmp8PIw1_Kj0Q9B0tkg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "674917342859-2m9fo4u70n677ic7pvlchvuvn9hseu25.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

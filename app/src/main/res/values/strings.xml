@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">GripApp</string>
+<!--    <string name="default_web_client_id">674917342859-2m9fo4u70n677ic7pvlchvuvn9hseu25.apps.googleusercontent.com</string>-->
+    <string name="facebook_app_id">433159958124793</string>
+    <string name="fb_login_protocol_scheme">fb433159958124793</string>
+</resources>
