@@ -72,19 +72,22 @@ class MainActivity : AppCompatActivity() {
             override fun onError(exception: FacebookException) {
             }
         })
-
-
     }
 
     private fun loadUserProfile(){
         val request:GraphRequest = GraphRequest.newMeRequest(
             AccessToken.getCurrentAccessToken()
-        ) { `object`, response ->
-            if (`object` != null) {
-                Log.d("fields", "onCompleted: $`object`")
+        ) { ob, response ->
+            if (ob != null) {
+                Log.d("fields", "onCompleted: $ob")
+
+                val intent = Intent(applicationContext,FacebookActivity::class.java)
+                intent.putExtra("id",ob.getString("id"))
+                intent.putExtra("name",ob.getString("name"))
+                intent.putExtra("photo","https://graph.facebook.com/"+ob.getString("id")+"/picture?type=large")
+                startActivity(intent)
             }
         }
-//        val intent = Intent(applicationContext,FacebookActivity::class.java)
         val bundle = Bundle()
         bundle.putString("fields","gender,name,id,first_name,last_name")
 
@@ -92,17 +95,17 @@ class MainActivity : AppCompatActivity() {
         request.executeAsync()
     }
 
-    val accessTokenTracker = object : AccessTokenTracker(){
-        override fun onCurrentAccessTokenChanged(
-            oldAccessToken: AccessToken?,
-            currentAccessToken: AccessToken?
-        ) {
-            if(currentAccessToken == null){
-
-            }
-        }
-
-    }
+//    val accessTokenTracker = object : AccessTokenTracker(){
+//        override fun onCurrentAccessTokenChanged(
+//            oldAccessToken: AccessToken?,
+//            currentAccessToken: AccessToken?
+//        ) {
+//            if(currentAccessToken == null){
+//
+//            }
+//        }
+//
+//    }
 
     private fun signIn() {
         val signInIntent: Intent = googleSignInClient.signInIntent
